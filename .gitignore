@@ -1,0 +1,25 @@
+# Environment variables
+.env
+.env.local
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# ChromaDB / Vector stores
+chroma_db/
+*.db
+
+# Data files
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+EOF

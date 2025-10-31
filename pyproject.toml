@@ -1,0 +1,39 @@
+[project]
+name = "holiday-show-faq-bot"
+version = "0.1.0"
+description = "bot to research holiday shows using RAG"
+readme = "README.md"
+
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.30.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.14.1",
+    "pytest>=8.0.0",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
